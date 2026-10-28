@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atendente de Farmácia - IA</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ícones do FontAwesome para o chat -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar / Histórico Lateral -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fa-solid fa-pills"></i> Farmácia Segura</h2>
+      </div>
+      <div class="sidebar-info">
+        <p><strong>Assistente de Atendimento</strong></p>
+        <p class="desc">Focado em segurança, conformidade com a ANVISA e triagem inicial.</p>
+      </div>
+      <div class="sidebar-footer">
+        <p><i class="fa-solid fa-shield-halved"></i> Ambiente Seguro</p>
+      </div>
+    </aside>
+
+    <!-- Área Principal de Chat -->
+    <main class="chat-main">
+      <header class="chat-header">
+        <h1>Atendente de Farmácia</h1>
+        <span class="status-badge"><i class="fa-solid fa-circle"></i> Online</span>
+      </header>
+
+      <!-- Container de Mensagens com Rolagem -->
+      <div id="chat-messages" class="chat-messages">
+        <!-- Mensagem de boas-vindas da IA -->
+        <div class="message model">
+          <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+          <div class="bubble">
+            Olá! Sou o atendente virtual da farmácia. Como posso ajudar com sua saúde ou dúvidas sobre medicamentos hoje?
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de Input Fixa na Base -->
+      <div class="chat-input-area">
+        <form id="chat-form">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="pergunta" 
+              placeholder="Digite sua dúvida ou sintoma aqui..." 
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="btn-submit" aria-label="Enviar">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
